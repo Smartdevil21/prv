@@ -1,0 +1,12 @@
+.small_contact{
+    width: fit-content;
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    z-index: 3;
+    p{
+        color: var(--grey);
+        font-size: 14px;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,160 @@
+.about {
+	width: 100%;
+	min-height: 100vh;
+	.about_homepage {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			color: #fff;
+			font-size: 48px;
+		}
+	}
+	.about_me {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--background_secondary);
+		.about_me_wrapper {
+			width: 60%;
+			height: fit-content;
+			background-color: var(--background_secondary);
+			position: relative;
+			z-index: 2;
+			border: 1px solid var(--borders);
+			color: #fff;
+			padding: 30px 20px;
+			h3 {
+				text-align: center;
+				padding-bottom: 20px;
+				font-size: 24px;
+			}
+			.info_wrapper {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				.image_wrapper {
+					width: 40%;
+				}
+				.text_wrapper {
+					width: 60%;
+					p {
+						font-size: 14px;
+						color: var(--p);
+					}
+					.info_sec {
+						.info_half_1,
+						.info_half_2 {
+							margin: 20px auto;
+							p {
+								strong {
+									color: var(--green);
+								}
+							}
+						}
+					}
+					button {
+						text-transform: none;
+						font-weight: 600;
+						color: var(--green);
+						border-radius: 0px;
+						border: 1px solid var(--green);
+					}
+				}
+			}
+		}
+	}
+	.skills {
+		width: 100%;
+		min-height: 100vh;
+		padding: 10vh 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h3 {
+			// text-align: center;
+            color: #fff;
+			padding-bottom: 20px;
+			font-size: 24px;
+			width: 60%;
+			text-align: left;
+		}
+		.skills_wrapper {
+			width: 60%;
+			position: relative;
+			background-color: var(--background_primary);
+			height: fit-content;
+			z-index: 2;
+			border: 1px solid var(--borders);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-flow: row;
+            flex-wrap: wrap;
+            .skill_container{
+                width: 19vw;
+                height: fit-content;
+                margin-top: 10vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                // background-color: red;
+                .outer_box{
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                    position: relative;
+                    margin-bottom: 20px;
+                    .inner_box{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        height: 150px;
+                        width: 150px;
+                        background-color: var(--background_primary);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            color: var(--grey);
+                        }
+                    }
+                }
+                p{
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
+		}
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.about {
+		.about_me {
+			.about_me_wrapper {
+				.info_wrapper {
+					.text_wrapper {
+						.info_sec {
+							display: flex;
+							justify-content: space-between;
+							.info_half_1,
+							.info_half_2 {
+								width: 50%;
+								margin: 40px auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

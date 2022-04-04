@@ -1,0 +1,44 @@
+.sidebar{
+    width: 100px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10vh;
+    // background-color: red;
+    .sidebar_wrapper{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            transform: rotate(90deg);
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        .separation_line{
+            height: 80px;
+            width: 1px;
+            background: var(--grey);
+        }
+        .social_links{
+            display: flex;
+            flex-direction: column;
+            svg{
+                margin: 10px 0px;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                color: #fff;
+            }
+            svg:hover{
+                transform: scale(1.2);
+                color: var(--green);
+            }
+        }
+    }
+}

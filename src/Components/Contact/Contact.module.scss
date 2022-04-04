@@ -1,0 +1,56 @@
+.contact{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15vh;
+    h1{
+        color: #fff;
+    }
+    .input_wrapper{
+        width: 60%;
+        background-color: var(--background_primary);
+        position: relative;
+        z-index: 2;
+        border: 1px solid var(--borders);
+        margin-top: 20px;
+        padding: 30px;
+        .user_details{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            input{
+                color: var(--p);
+                background: var(--background_secondary);
+                border-radius: 5px;
+                width: 15vw;
+                label{
+                    color: var(--p) !important;
+                }
+            }
+        }
+        input{
+            color: var(--p);
+            background-color: var(--background_secondary) !important;
+            border-radius: 10px;
+            width: 100%;
+        }
+        .bottom_btn{
+            width: 100%;
+            margin-top: 20px;
+            text-align: right;
+            button{
+                border: 1px solid var(--green);
+                text-transform: none;
+                border-radius: 0px;
+                p{
+                    color: var(--green);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

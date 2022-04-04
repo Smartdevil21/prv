@@ -42,22 +42,22 @@ function Navbar() {
 				<div
 					className={Styles.link_wrapper}
 					onClick={() => {
-						changeLink("/");
+						changeLink("/prv");
 					}}
 				>
-					<p style={{ color: states.activeLink === "/" ? "#fff" : "#989898" }}>
+					<p style={{ color: states.activeLink === "/prv" ? "#fff" : "#989898" }}>
 						Home
 					</p>
 				</div>
 				<div
 					className={`${Styles.link_wrapper} mouse_hover`}
 					onClick={() => {
-						changeLink("/about");
+						changeLink("/prv/about");
 					}}
 				>
 					<p
 						style={{
-							color: states.activeLink === "/about" ? "#fff" : "#989898",
+							color: states.activeLink === "/prv/about" ? "#fff" : "#989898",
 						}}
 					>
 						About
@@ -66,12 +66,12 @@ function Navbar() {
 				<div
 					className={`${Styles.link_wrapper} mouse_hover`}
 					onClick={() => {
-						changeLink("/services");
+						changeLink("/prv/services");
 					}}
 				>
 					<p
 						style={{
-							color: states.activeLink === "/services" ? "#fff" : "#989898",
+							color: states.activeLink === "/prv/services" ? "#fff" : "#989898",
 						}}
 					>
 						Services
@@ -80,12 +80,12 @@ function Navbar() {
 				<div
 					className={`${Styles.link_wrapper} mouse_hover`}
 					onClick={() => {
-						changeLink("/portfolio");
+						changeLink("/prv/portfolio");
 					}}
 				>
 					<p
 						style={{
-							color: states.activeLink === "/portfolio" ? "#fff" : "#989898",
+							color: states.activeLink === "/prv/portfolio" ? "#fff" : "#989898",
 						}}
 					>
 						Portfolio
@@ -94,12 +94,12 @@ function Navbar() {
 				<div
 					className={`${Styles.link_wrapper} mouse_hover`}
 					onClick={() => {
-						changeLink("/contact");
+						changeLink("/prv/contact");
 					}}
 				>
 					<p
 						style={{
-							color: states.activeLink === "/contact" ? "#fff" : "#989898",
+							color: states.activeLink === "/prv/contact" ? "#fff" : "#989898",
 						}}
 					>
 						Contact

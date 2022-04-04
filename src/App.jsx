@@ -148,7 +148,7 @@ function App() {
 				<SmallContact />
 				<Routes>
 					<Route
-						path="/"
+						path="/prtk"
 						element={
 							<>
 								<Home />

@@ -3,6 +3,7 @@ import Styles from "./About.module.scss";
 import { StatesContext } from "../../App";
 import { useContext } from "react";
 import { Button } from "@mui/material";
+import { Icon } from "@iconify/react";
 
 function About() {
 	const { states, setStates } = useContext(StatesContext);
@@ -11,12 +12,26 @@ function About() {
 		setStates((prev) => ({ ...prev, reversed: false }));
 	}, []);
 
+	function scrollUp(className) {
+		document.querySelector(className).scrollIntoView({
+			behavior: "smooth",
+		});
+	}
+
 	return (
 		<section className={Styles.about}>
 			<div className={Styles.about_homepage}>
 				<h1>About Me</h1>
+				<div
+					className={Styles.dropdown_wrapper}
+					onClick={() => {
+						scrollUp(".about_me");
+					}}
+				>
+					<Icon icon="ant-design:caret-down-filled" color="#01ee99" />
+				</div>
 			</div>
-			<div className={Styles.about_me}>
+			<div className={`${Styles.about_me} about_me`}>
 				<div className={Styles.about_me_wrapper}>
 					<h3>Who Am I?</h3>
 					<div className={Styles.info_wrapper}>
@@ -55,7 +70,26 @@ function About() {
 									</p>
 								</div>
 							</div>
-							<Button>Contact</Button>
+							<div
+								onMouseEnter={(e) => {
+									const test = document.querySelector(".test");
+									test.style.left = `${e.clientX - Math.floor(e.target.getBoundingClientRect().left)}px`;
+									test.style.top = `${e.clientY - Math.floor(e.target.getBoundingClientRect().top)}px`;
+									// test.style.width = "200px";
+									// test.style.height = "200px";
+								}}
+								onMouseLeave={(e)=>{
+									const test = document.querySelector(".test");
+									// test.style.width = "00px";
+									// test.style.height = "00px";
+									test.style.left = `${e.clientX - Math.floor(e.target.getBoundingClientRect().left)}px`;
+									test.style.top = `${e.clientY - Math.floor(e.target.getBoundingClientRect().top)}px`;
+								}}
+								className={`${Styles.contact_btn}`}
+							>
+								<div className={`${Styles.test} test`}></div>
+								<p>Contact</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -63,48 +97,78 @@ function About() {
 			<div className={Styles.skills}>
 				<h3>My Skills</h3>
 				<div className={Styles.skills_wrapper}>
-					<div className={Styles.skill_container}> 
-						<div className={Styles.outer_box} style={{background:"conic-gradient(#01EE99 0% 90%, #0C0C0C 90% 100%)"}}>
+					<div className={Styles.skill_container}>
+						<div
+							className={Styles.outer_box}
+							style={{
+								background: "conic-gradient(#01EE99 0% 90%, #0C0C0C 90% 100%)",
+							}}
+						>
 							<div className={Styles.inner_box}>
 								<p>90%</p>
 							</div>
 						</div>
 						<p>HTML/CSS</p>
 					</div>
-					<div className={Styles.skill_container}> 
-						<div className={Styles.outer_box} style={{background:"conic-gradient(#01EE99 0% 80%, #0C0C0C 80% 100%)"}}>
+					<div className={Styles.skill_container}>
+						<div
+							className={Styles.outer_box}
+							style={{
+								background: "conic-gradient(#01EE99 0% 80%, #0C0C0C 80% 100%)",
+							}}
+						>
 							<div className={Styles.inner_box}>
 								<p>80%</p>
 							</div>
 						</div>
 						<p>JavaScript</p>
 					</div>
-					<div className={Styles.skill_container}> 
-						<div className={Styles.outer_box} style={{background:"conic-gradient(#01EE99 0% 80%, #0C0C0C 80% 100%)"}}>
+					<div className={Styles.skill_container}>
+						<div
+							className={Styles.outer_box}
+							style={{
+								background: "conic-gradient(#01EE99 0% 80%, #0C0C0C 80% 100%)",
+							}}
+						>
 							<div className={Styles.inner_box}>
 								<p>80%</p>
 							</div>
 						</div>
 						<p>ReactJS</p>
 					</div>
-					<div className={Styles.skill_container}> 
-						<div className={Styles.outer_box} style={{background:"conic-gradient(#01EE99 0% 60%, #0C0C0C 60% 100%)"}}>
+					<div className={Styles.skill_container}>
+						<div
+							className={Styles.outer_box}
+							style={{
+								background: "conic-gradient(#01EE99 0% 60%, #0C0C0C 60% 100%)",
+							}}
+						>
 							<div className={Styles.inner_box}>
 								<p>60%</p>
 							</div>
 						</div>
 						<p>NodeJS</p>
 					</div>
-					<div className={Styles.skill_container}> 
-						<div className={Styles.outer_box} style={{background:"conic-gradient(#01EE99 0% 70%, #0C0C0C 70% 100%)"}}>
+					<div className={Styles.skill_container}>
+						<div
+							className={Styles.outer_box}
+							style={{
+								background: "conic-gradient(#01EE99 0% 70%, #0C0C0C 70% 100%)",
+							}}
+						>
 							<div className={Styles.inner_box}>
 								<p>70%</p>
 							</div>
 						</div>
 						<p>MongoDB</p>
 					</div>
-					<div className={Styles.skill_container}> 
-						<div className={Styles.outer_box} style={{background:"conic-gradient(#01EE99 0% 60%, #0C0C0C 60% 100%)"}}>
+					<div className={Styles.skill_container}>
+						<div
+							className={Styles.outer_box}
+							style={{
+								background: "conic-gradient(#01EE99 0% 60%, #0C0C0C 60% 100%)",
+							}}
+						>
 							<div className={Styles.inner_box}>
 								<p>60%</p>
 							</div>

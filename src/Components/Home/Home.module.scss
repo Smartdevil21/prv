@@ -23,6 +23,7 @@
         transform: translate(0%, -50%);
         color: #fff;
         p{
+            font-size: 1.5vw;
             strong{
                 color: var(--green);
             }
@@ -34,9 +35,10 @@
         right: 10%;
         color: #fff;
         font-size: 28px;
-        width: 700px;
+        width: 50vw;
         // background-color: red;
         h2{
+            font-size: 3vw;
             strong{
                 color: var(--green);
                 position: relative;

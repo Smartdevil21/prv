@@ -113,10 +113,14 @@ function App() {
 
 	useEffect(() => {
 		setStates((prev) => ({ ...prev, activeLink: location.pathname }));
+		document.querySelector(".top").scrollIntoView({
+			behavior:"smooth",
+		});
 	}, [location.pathname]);
 
 	return (
 		<StatesContext.Provider value={{ states, setStates }}>
+			<div className="top"></div>
 			<div className={`${Styles.app} app`} ref={body}>
 				<div className={Styles.prtk}>
 					<span>

@@ -10,12 +10,23 @@ function Services() {
 		setStates((prev) => ({ ...prev, reversed: false }));
 	}, []);
 
+	function scrollUp(className){
+		document.querySelector(className).scrollIntoView({
+			behavior:"smooth",
+		});
+	};
+
 	return (
 		<section className={Styles.services_wrapper}>
 			<div className={Styles.services_homepage}>
 				<h1>Services</h1>
+				<div className={Styles.dropdown_wrapper} onClick={()=>{
+					scrollUp(".services");
+				}}>
+					<Icon icon="ant-design:caret-down-filled" color="#01ee99" />
+				</div>
 			</div>
-			<div className={Styles.services}>
+			<div className={`${Styles.services} services`}>
 				<h3>What I Do?</h3>
 				<div className={Styles.services_container}>
 					<div className={Styles.flexbox}>

@@ -8,28 +8,77 @@ function Contact() {
 
 	useEffect(() => {
 		setStates((prev) => ({ ...prev, reversed: false }));
-	},[]);
+	}, []);
+
+	const styles = (theme) => ({
+		multilineColor: {
+			color: "red",
+		},
+	});
 
 	return (
 		<section className={Styles.contact}>
 			<h1>Get In Touch!</h1>
 			<div className={Styles.input_wrapper}>
 				<div className={Styles.user_details}>
-					<TextField variant="filled" size="small" label="Name" />
-					<TextField variant="filled" size="small" label="Email" />
-					<TextField variant="filled" size="small" label="Contact" />
+					<TextField
+						variant="filled"
+						size="small"
+						placeholder="Name"
+						color="success"
+					/>
+					<TextField
+						variant="filled"
+						size="small"
+						placeholder="Email"
+						color="success"
+					/>
+					<TextField
+						variant="filled"
+						size="small"
+						placeholder="Contact"
+						color="success"
+					/>
 				</div>
-                <br/>
-				<TextField
-					variant="filled"
-					label="Message"
+				<br />
+				{/* <label htmlFor="name">Message:</label> */}
+				{/* <TextField
+					name="message"
+					variant="outlined"
+					size="small"
+					color="success"
+					placeholder="Message"
 					multiline
 					minRows={10}
 					fullWidth
-                    style={{background:"#121212"}}
-				/>
-				<div className={Styles.bottom_btn}>
-					<Button><p>Send</p></Button>
+					className={Styles.message_input}
+				/> */}
+				<textarea className={Styles.message_input} rows={10} placeholder="Message" />
+				<div className={Styles.bottom_div}>
+					<div
+						onMouseEnter={(e) => {
+							const test = document.querySelector(".test");
+							test.style.left = `${
+								e.clientX - Math.floor(e.target.getBoundingClientRect().left)
+							}px`;
+							test.style.top = `${
+								e.clientY - Math.floor(e.target.getBoundingClientRect().top)
+							}px`;
+						}}
+						onMouseLeave={(e) => {
+							const test = document.querySelector(".test");
+							test.style.left = `${
+								e.clientX - Math.floor(e.target.getBoundingClientRect().left)
+							}px`;
+							test.style.top = `${
+								e.clientY - Math.floor(e.target.getBoundingClientRect().top)
+							}px`;
+						}}
+						className={`${Styles.contact_btn}`}
+					>
+						<div className={`${Styles.test} test`}></div>
+						<p>Send</p>
+					</div>
 				</div>
 			</div>
 		</section>

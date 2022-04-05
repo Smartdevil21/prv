@@ -22,11 +22,11 @@ function Navbar() {
 			) {
 				header.current.style.background = "#0C0C0C";
 				header.current.style.top = "0px";
-				header.current.style.padding = "20px 0px";
+				header.current.style.padding = "20px 50px";
 			} else {
 				header.current.style.background = "transparent";
 				header.current.style.top = "30px";
-				header.current.style.padding = "0px 0px";
+				header.current.style.padding = "0px 50px";
 			};
 		});
 	}, []);

@@ -1,6 +1,6 @@
 .header {
 	color: #fff;
-	width: calc(100% - 100px);
+	width: 100%;
 	height: fit-content;
 	display: flex;
 	justify-content: space-between;
@@ -8,7 +8,7 @@
 	z-index: 4;
 	position: fixed;
 	top: 30px;
-	left: 50px;
+	padding: 0px 50px;
 	transition: 0.3s ease-in-out;
 	.logo {
 		h2 {
@@ -19,15 +19,15 @@
 	}
 	.navlinks {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		width: 40%;
+		width: fit-content;
 		.link_wrapper{
             height: fit-content;
             // background-color: rebeccapurple;
             overflow-y: hidden;
             cursor: pointer;
 			position: relative;
+			margin: 0px 10px;
 			z-index: 5;
             p {
                 font-weight: 600;

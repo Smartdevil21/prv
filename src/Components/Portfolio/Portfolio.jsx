@@ -8,10 +8,16 @@ import parallax from "../../Images/parallax.png";
 import portfolio2 from "../../Images/portfolio2.png";
 import portfolio1 from "../../Images/portfolio1.png";
 import stayAfloat from "../../Images/stayAfloat.png";
+import { Icon } from "@iconify/react";
 // import weddingPhotographer from "../../Images/weddingPhotographer.png";
 
 function Portfolio() {
 	const { states, setStates } = useContext(StatesContext);
+	function scrollUp(className){
+		document.querySelector(className).scrollIntoView({
+			behavior:"smooth",
+		});
+	};
 
 	useEffect(() => {
 		setStates((prev) => ({ ...prev, reversed: false }));
@@ -21,8 +27,13 @@ function Portfolio() {
 		<section className={Styles.portfolio}>
 			<div className={Styles.portfolio_homepage}>
 				<h1>Portfolio</h1>
+				<div className={Styles.dropdown_wrapper} onClick={()=>{
+					scrollUp(".work");
+				}}>
+					<Icon icon="ant-design:caret-down-filled" color="#01ee99" />
+				</div>
 			</div>
-			<div className={Styles.work}>
+			<div className={`${Styles.work} work`}>
 				<div className={Styles.work_container}>
 					<div className={Styles.bork_container}>
 						<h3>My Projects</h3>

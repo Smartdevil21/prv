@@ -11,6 +11,18 @@
             color: #fff;
             font-size: 48px;
         }
+        position:relative;
+		.dropdown_wrapper{
+			width: fit-content;
+			height: fit-content;
+			position: absolute;
+			bottom: 10vh;
+			right: 10vw;
+			cursor: pointer;
+			svg{
+                animation: dropdown 0.8s infinite linear;
+            }
+		}
     }
     .services{
         width: 100%;
@@ -68,4 +80,15 @@
             }
         }
     }
+}
+@keyframes dropdown{
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(-2.5vh);
+	}
+	100%{
+		transform: translateY(00px);
+	}
 }

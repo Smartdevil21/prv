@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/prv/static/css/main.a5fd38b5.css",
-    "main.js": "/prv/static/js/main.abf124bc.js",
+    "main.css": "/prv/static/css/main.ab4f73c1.css",
+    "main.js": "/prv/static/js/main.c7f2b199.js",
     "static/media/weddingPhotographer.png": "/prv/static/media/weddingPhotographer.fc45948c518aeab1b5e6.png",
     "static/media/parallax.png": "/prv/static/media/parallax.d597dc669f8c6e492369.png",
     "static/media/bork_1.png": "/prv/static/media/bork_1.47151ad98eb3dc3e25e2.png",
@@ -11,11 +11,11 @@
     "static/media/portfolio1.png": "/prv/static/media/portfolio1.ce428bed19d8428b6819.png",
     "static/media/portfolio2.png": "/prv/static/media/portfolio2.ce10de58fabf82f01db5.png",
     "index.html": "/prv/index.html",
-    "main.a5fd38b5.css.map": "/prv/static/css/main.a5fd38b5.css.map",
-    "main.abf124bc.js.map": "/prv/static/js/main.abf124bc.js.map"
+    "main.ab4f73c1.css.map": "/prv/static/css/main.ab4f73c1.css.map",
+    "main.c7f2b199.js.map": "/prv/static/js/main.c7f2b199.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5fd38b5.css",
-    "static/js/main.abf124bc.js"
+    "static/css/main.ab4f73c1.css",
+    "static/js/main.c7f2b199.js"
   ]
 }

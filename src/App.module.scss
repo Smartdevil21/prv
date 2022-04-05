@@ -72,15 +72,15 @@
 		z-index: 11;
 		text-align: center;
 		color: #fff;
-		span{
+		span {
 			display: flex;
 			justify-content: center;
 			overflow-y: hidden;
-			h1{
+			h1 {
 				transition: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 				transform: translateY(40px);
 			}
-			strong{
+			strong {
 				color: var(--green);
 			}
 		}
@@ -102,3 +102,37 @@
 	}
 }
 
+@media only screen and (max-width: 800px) {
+	.app {
+		.layer1,
+		.layer2,
+		.layer3,
+		.layer4,
+		.layer5 {
+			width: 33.334%;
+		}
+		.layer1,
+		.layer5 {
+			display: none;
+		}
+		.layer2 {
+			left: 0% ;
+		}
+		.layer3 {
+			left: 33.334% ;
+		}
+		.layer4 {
+			left: 66.667% ;
+		}
+		.bg_line_1,
+		.bg_line_4 {
+			display: none;
+		}
+		.bg_line_2 {
+			left: 33.334% ;
+		}
+		.bg_line_3 {
+			left: 66.667%  ;
+		}
+	}
+}

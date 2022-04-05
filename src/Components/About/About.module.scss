@@ -212,3 +212,39 @@
 		transform: translateY(00px);
 	}
 }
+
+@media only screen and (max-width:800px){
+	.about{
+		.about_me{
+			.about_me_wrapper{
+				width: 100%;
+				padding: 20px;
+				.info_wrapper{
+					flex-direction: column-reverse;
+					align-items: center;
+					.image_wrapper{
+						width: 100%;
+					}
+					.text_wrapper{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+						p{
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+		.skills{
+			h3{
+				text-align: center;
+			}
+			.skills_wrapper{
+				width: 100%;
+				flex-direction: column;
+			}
+		}
+	}
+}

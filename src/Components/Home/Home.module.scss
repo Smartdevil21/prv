@@ -67,3 +67,50 @@
         opacity: 1;
     }
 }
+
+@media only screen and (max-width: 1000px){
+    .home{
+        .intro_text{
+            p{
+                font-size: 18px;
+            }
+        }
+        .changing_text{
+            width: 500px;
+            h2{
+                font-size: 32px;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:800px){
+    .home{
+        width: 100vw;
+        overflow-x: hidden;
+        .profile_img{
+            img{
+                height: 60vh;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .intro_text{
+            top: 65%;
+            left: 0%;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        .changing_text{
+            width: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 10px;
+            height: 100px;
+        }
+    }
+}

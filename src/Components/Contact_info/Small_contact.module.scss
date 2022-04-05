@@ -10,3 +10,9 @@
         font-weight: 400;
     }
 }
+
+@media only screen and (max-width:800px){
+    .small_contact{
+        display: none;
+    }
+}

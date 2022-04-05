@@ -79,15 +79,25 @@ function App() {
 		const result = await Promise.all(promises);
 		console.log(result);
 		nameTL.current.reversed(true);
-		setTimeout(() => {
-			layerTL.current = gsap
-				.timeline()
-				.to(layer1.current, { height: 0, duration: 0.5 })
-				.to(layer5.current, { height: 0, duration: 0.5 }, "-=0.5")
-				.to(layer2.current, { height: 0, duration: 0.5 }, "-=0.3")
-				.to(layer4.current, { height: 0, duration: 0.5 }, "-=0.5")
-				.to(layer3.current, { height: 0, duration: 0.5 }, "-=0.3");
-		}, 2000);
+		if(window.innerWidth > 800){
+			setTimeout(() => {
+				layerTL.current = gsap
+					.timeline()
+					.to(layer1.current, { height: 0, duration: 0.5 })
+					.to(layer5.current, { height: 0, duration: 0.5 }, "-=0.5")
+					.to(layer2.current, { height: 0, duration: 0.5 }, "-=0.3")
+					.to(layer4.current, { height: 0, duration: 0.5 }, "-=0.5")
+					.to(layer3.current, { height: 0, duration: 0.5 }, "-=0.3");
+			}, 2000);
+		}else{
+			setTimeout(() => {
+				layerTL.current = gsap
+					.timeline()
+					.to(layer2.current, { height: 0, duration: 0.5 })
+					.to(layer4.current, { height: 0, duration: 0.5 }, "-=0.5")
+					.to(layer3.current, { height: 0, duration: 0.5 }, "-=0.3");
+			}, 2000);
+		}
 	};
 
 	useEffect(() => {

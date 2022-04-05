@@ -92,3 +92,22 @@
 		transform: translateY(00px);
 	}
 }
+
+@media only screen and (max-width:800px){
+    .services_wrapper{
+        .services{
+            padding-top: 10vh;
+            h3{
+                text-align: center;
+                font-size: 24px;
+            }
+            .services_container{
+                width: 100%;
+                .flexbox{
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

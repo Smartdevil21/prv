@@ -22,6 +22,8 @@
 		h1 {
 			color: #fff;
             font-size: 48px;
+			position: relative;
+			z-index: 3;
 		}
 	}
 	.work {
@@ -142,5 +144,46 @@
 	}
 	100%{
 		transform: translateY(00px);
+	}
+}
+
+@media only screen and (max-width:800px){
+	.portfolio{
+		.work{
+			.work_container{
+				width: 100%;
+				padding: 20px;
+				.bork_container{
+					height: fit-content;
+					margin: 10vh auto;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:600px){
+	.portfolio{
+		.work{
+			.work_container{
+				h3{
+					text-align: center;
+				}
+				.bork_container{
+					width: 80%;
+					h3{
+						text-align: center;
+					}
+				}
+				.works_container{
+					.work_flexbox{
+						justify-content: center;
+						a{
+							width: 80%;
+						}
+					}
+				}
+			}
+		}
 	}
 }

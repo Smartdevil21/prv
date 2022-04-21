@@ -50,9 +50,13 @@
 			.info_wrapper {
 				display: flex;
 				justify-content: space-between;
-				align-items: flex-start;
+				align-items: center;
 				.image_wrapper {
 					width: 40%;
+					img{
+						width: 80%;
+						border-radius: 10px;
+					}
 				}
 				.text_wrapper {
 					width: 60%;
@@ -222,12 +226,17 @@
 				width: 100%;
 				padding: 20px;
 				.info_wrapper{
-					flex-direction: column-reverse;
+					flex-direction: column;
 					align-items: center;
 					.image_wrapper{
 						width: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin-bottom: 20px;
 					}
 					.text_wrapper{
+						width: 90%;
 						display: flex;
 						justify-content: center;
 						align-items: center;

@@ -9,10 +9,10 @@ function Sidebar() {
 				<p>Follow Me</p>
 				<div className={Styles.separation_line}> </div>
 				<div className={Styles.social_links}>
-					<Icon className="mouse_hover" icon="akar-icons:linkedin-fill" />
-                    <Icon className="mouse_hover" icon="bi:instagram" />
-                    <Icon className="mouse_hover" icon="akar-icons:github-fill" />
-                    <Icon className="mouse_hover" icon="dashicons:facebook-alt" />
+					<a href="https://www.linkedin.com/in/prateek-vaidya-65b986201/" target={"_blank"} ><Icon className="mouse_hover" icon="akar-icons:linkedin-fill" /></a>
+                    <a href="https://www.instagram.com/prtk.sd/" target={"_blank"} ><Icon className="mouse_hover" icon="bi:instagram" /></a>
+                    <a href="https://github.com/Pratik1803" target={"_blank"} ><Icon className="mouse_hover" icon="akar-icons:github-fill" /></a>
+                    <a href=""><Icon className="mouse_hover" icon="dashicons:facebook-alt" /></a>
 				</div>
 			</div>
 		</div>

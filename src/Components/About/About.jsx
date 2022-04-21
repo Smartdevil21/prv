@@ -4,6 +4,7 @@ import { StatesContext } from "../../App";
 import { useContext } from "react";
 import { Button } from "@mui/material";
 import { Icon } from "@iconify/react";
+import portrait from "../../Images/portrait.jpg";
 
 function About() {
 	const { states, setStates } = useContext(StatesContext);
@@ -36,9 +37,10 @@ function About() {
 					<h3>Who Am I?</h3>
 					<div className={Styles.info_wrapper}>
 						<div className={Styles.image_wrapper}>
-							{/* <img src="" alt="" /> */}
+							<img src={portrait} alt="" />
 						</div>
 						<div className={Styles.text_wrapper}>
+							<p><strong>Hello,</strong></p>
 							<p>
 								I am a freelance MERN Stack developer and a UI/UX Designer
 								powered by Figma, JavaScript, Visual Studio Code and Coffee. I

@@ -13,6 +13,11 @@ function Navbar() {
 
 	//for opening and Closing of navbar in mobile view
 	function hamburger() {
+		if(!navState){
+			header.current.style.height = "100vh";
+		}else{
+			header.current.style.height = "80px";
+		}
 		setNavState(!navState);
 	}
 
@@ -21,7 +26,9 @@ function Navbar() {
 		setTimeout(() => {
 			navigator(link);
 		}, 1700);
-		hamburger();
+		if(window.innerWidth < 800){
+			hamburger();
+		}
 	}
 
 	useEffect(() => {
@@ -37,13 +44,12 @@ function Navbar() {
 				} else {
 					header.current.style.top = "0px";
 				}
-				header.current.style.padding = "0px 50px";
+				header.current.style.padding = "00px 50px";
 			}
 		});
 		tl.current = gsap
 			.timeline()
-			.to(header.current, { height: "80px", duration: 0.3 })
-			.to(header.current, { backgroundColor: "transparent", duration: 0.3 });
+			.to(header.current, { backgroundColor: "transparent", duration: 0.3 }, "+=0.3");
 	}, []);
 
 	useEffect(() => {

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/prv/static/css/main.98597301.css",
-    "main.js": "/prv/static/js/main.30af55c1.js",
+    "main.css": "/prv/static/css/main.916b5d7e.css",
+    "main.js": "/prv/static/js/main.f18d4405.js",
     "static/media/weddingPhotographer.png": "/prv/static/media/weddingPhotographer.fc45948c518aeab1b5e6.png",
     "static/media/parallax.png": "/prv/static/media/parallax.d597dc669f8c6e492369.png",
     "static/media/bork_1.png": "/prv/static/media/bork_1.47151ad98eb3dc3e25e2.png",
@@ -10,12 +10,13 @@
     "static/media/chillMountains.png": "/prv/static/media/chillMountains.54d77468b0641ea2ff6e.png",
     "static/media/portfolio1.png": "/prv/static/media/portfolio1.ce428bed19d8428b6819.png",
     "static/media/portfolio2.png": "/prv/static/media/portfolio2.ce10de58fabf82f01db5.png",
+    "static/media/portrait.jpg": "/prv/static/media/portrait.10a889615ee8adb48d28.jpg",
     "index.html": "/prv/index.html",
-    "main.98597301.css.map": "/prv/static/css/main.98597301.css.map",
-    "main.30af55c1.js.map": "/prv/static/js/main.30af55c1.js.map"
+    "main.916b5d7e.css.map": "/prv/static/css/main.916b5d7e.css.map",
+    "main.f18d4405.js.map": "/prv/static/js/main.f18d4405.js.map"
   },
   "entrypoints": [
-    "static/css/main.98597301.css",
-    "static/js/main.30af55c1.js"
+    "static/css/main.916b5d7e.css",
+    "static/js/main.f18d4405.js"
   ]
 }

@@ -105,6 +105,9 @@
             text-align: center;
         }
         .changing_text{
+            h2{
+                font-size: 26px;
+            }
             width: fit-content;
             left: 50%;
             transform: translateX(-50%);

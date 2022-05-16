@@ -46,8 +46,33 @@
     }
 }
 
-@media only screen and (max-width:950px){
+@media only screen and (max-width:800px){
     .sidebar{
-        display: none;
+        top: auto;
+        right: auto;
+        bottom: 0px;
+        width: 100%;
+        .sidebar_wrapper{
+            p, .separation_line{
+                display: none;
+            }
+            .social_links{
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                a{
+                    svg{
+                        margin: 0px 10px;
+                        cursor: pointer;
+                        transition: 0.3s ease-in-out;
+                        color: #fff;
+                    }
+                    svg:hover{
+                        transform: scale(1.2);
+                        color: var(--green);
+                    }
+                }
+            }
+        } 
     }
 }

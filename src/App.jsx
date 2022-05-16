@@ -77,7 +77,6 @@ function App() {
 			});
 		});
 		const result = await Promise.all(promises);
-		console.log(result);
 		nameTL.current.reversed(true);
 		if(window.innerWidth > 800){
 			setTimeout(() => {

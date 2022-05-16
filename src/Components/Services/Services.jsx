@@ -42,24 +42,21 @@ function Services() {
                         <Icon icon="akar-icons:figma-fill" color="#01ee99" />
 							<p className={Styles.service_heading}>UI/UX Design</p>
 							<p className={Styles.service_desc}>
-								Modern and mobile-ready website that will help you reach all of
-								your marketing.
+								Designs that best suite your brand and purpose.
 							</p>
 						</div>
 						<div className={Styles.service}>
                         <Icon icon="entypo:feather" color="#01ee99" />
 							<p className={Styles.service_heading}>Content Writing</p>
 							<p className={Styles.service_desc}>
-								Modern and mobile-ready website that will help you reach all of
-								your marketing.
+								Content that can provide more value to your website.
 							</p>
 						</div>
 						<div className={Styles.service}>
                         <Icon icon="bx:search-alt" color="#01ee99" />
 							<p className={Styles.service_heading}>SEO</p>
 							<p className={Styles.service_desc}>
-								Modern and mobile-ready website that will help you reach all of
-								your marketing.
+								I follow best SEO practices that help your website rank better in Google Searches.
 							</p>
 						</div>
 					</div>

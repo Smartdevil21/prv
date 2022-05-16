@@ -10,6 +10,7 @@ function Contact() {
 	const [messageDetails, setMessageDetails] = useState({
 		name: "",
 		email: "",
+		contact:"",
 		message: "",
 	});
 
@@ -28,7 +29,7 @@ function Contact() {
 			setLoading(true);
 			const result = await axios({
 				method: "post",
-				url: "https://bork0.herokuapp.com/feedback",
+				url: `${process.env.REACT_APP_BACKEND_URL}`,
 				data: {
 					username: messageDetails.name,
 					email: messageDetails.email,
@@ -39,10 +40,13 @@ function Contact() {
 			setMessageDetails({
 				name:"",
 				email:"",
+				contact:"",
 				message:""
 			});
 			setLoading(false);
-		} catch (error) {}
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	return (
@@ -65,6 +69,7 @@ function Contact() {
 						size="small"
 						placeholder="Email"
 						color="success"
+						type={"email"}
 						value={messageDetails.email}
 						onChange={(e) => {
 							setMessageDetails((prev) => ({ ...prev, email: e.target.value }));
@@ -75,6 +80,11 @@ function Contact() {
 						size="small"
 						placeholder="Contact"
 						color="success"
+						type={"tel"}
+						value={messageDetails.contact}
+						onChange={(e) => {
+							setMessageDetails((prev) => ({ ...prev, contact: e.target.value }));
+						}}
 					/>
 				</div>
 				<br />

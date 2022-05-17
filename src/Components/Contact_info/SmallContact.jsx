@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from "./Small_contact.module.scss";
+import { Icon } from "@iconify/react";
 
 function SmallContact() {
   return (

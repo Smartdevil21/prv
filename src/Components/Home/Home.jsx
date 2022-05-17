@@ -39,7 +39,7 @@ function Home() {
 
 	useEffect(() => {
 		setStates((prev) => ({ ...prev, reversed: false }));
-		// typewriter();
+		typewriter();
 	}, []);
 
 	return (

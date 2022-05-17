@@ -10,7 +10,7 @@ function Contact() {
 	const [messageDetails, setMessageDetails] = useState({
 		name: "",
 		email: "",
-		contact:"",
+		contact: "",
 		message: "",
 	});
 
@@ -19,26 +19,34 @@ function Contact() {
 	}, []);
 
 	const submit = async () => {
-		console.log(process.env.REACT_APP_BACKEND_URL);
 		try {
-			setLoading(true);
-			const result = await axios({
-				method: "post",
-				url: `${process.env.REACT_APP_BACKEND_URL}`,
-				data: {
-					username: messageDetails.name,
-					email: messageDetails.email,
-					message: messageDetails.message,
-				},
-			});
-			alert("Message Sent! ✈️");
-			setMessageDetails({
-				name:"",
-				email:"",
-				contact:"",
-				message:""
-			});
-			setLoading(false);
+			if (
+				messageDetails.name &&
+				messageDetails.email &&
+				messageDetails.contact &&
+				messageDetails.message
+			) {
+				setLoading(true);
+				const result = await axios({
+					method: "post",
+					url: `${process.env.REACT_APP_BACKEND_URL}`,
+					data: {
+						username: messageDetails.name,
+						email: messageDetails.email,
+						message: messageDetails.message,
+					},
+				});
+				alert("Message Sent! ✈️");
+				setMessageDetails({
+					name: "",
+					email: "",
+					contact: "",
+					message: "",
+				});
+				setLoading(false);
+			} else {
+				alert("Fill the appropriate details first!");
+			}
 		} catch (error) {
 			console.log(error);
 		}
@@ -51,6 +59,7 @@ function Contact() {
 				<div className={Styles.user_details}>
 					<TextField
 						variant="filled"
+						autoFocus
 						size="small"
 						placeholder="Name"
 						color="success"
@@ -78,7 +87,10 @@ function Contact() {
 						type={"tel"}
 						value={messageDetails.contact}
 						onChange={(e) => {
-							setMessageDetails((prev) => ({ ...prev, contact: e.target.value }));
+							setMessageDetails((prev) => ({
+								...prev,
+								contact: e.target.value,
+							}));
 						}}
 					/>
 				</div>

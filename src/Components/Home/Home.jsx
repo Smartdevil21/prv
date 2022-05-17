@@ -3,6 +3,7 @@ import Styles from "./Home.module.scss";
 import profile from "../../Images/profile.png";
 import { StatesContext } from "../../App";
 import { useContext } from "react";
+import { Icon } from "@iconify/react";
 
 function Home() {
 	const { states, setStates } = useContext(StatesContext);
@@ -34,11 +35,11 @@ function Home() {
 			}
 			setTimeout(typewriter, 50);
 		}
-	};
+	}
 
 	useEffect(() => {
 		setStates((prev) => ({ ...prev, reversed: false }));
-		typewriter();
+		// typewriter();
 	}, []);
 
 	return (
@@ -57,6 +58,23 @@ function Home() {
 				<h2>
 					I am a <strong ref={fillup}></strong>
 				</h2>
+			</div>
+			<div className={Styles.home_social_links}>
+				<a
+					href="https://www.linkedin.com/in/prateek-vaidya-65b986201/"
+					target={"_blank"}
+				>
+					<Icon className="mouse_hover" icon="akar-icons:linkedin-fill" />
+				</a>
+				<a href="https://www.instagram.com/prtk.sd/" target={"_blank"}>
+					<Icon className="mouse_hover" icon="bi:instagram" />
+				</a>
+				<a href="https://github.com/Pratik1803" target={"_blank"}>
+					<Icon className="mouse_hover" icon="akar-icons:github-fill" />
+				</a>
+				<a href="">
+					<Icon className="mouse_hover" icon="dashicons:facebook-alt" />
+				</a>
 			</div>
 		</div>
 	);

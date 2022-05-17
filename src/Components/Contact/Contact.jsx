@@ -18,13 +18,8 @@ function Contact() {
 		setStates((prev) => ({ ...prev, reversed: false }));
 	}, []);
 
-	const styles = (theme) => ({
-		multilineColor: {
-			color: "red",
-		},
-	});
-
 	const submit = async () => {
+		console.log(process.env.REACT_APP_BACKEND_URL);
 		try {
 			setLoading(true);
 			const result = await axios({

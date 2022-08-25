@@ -57,7 +57,7 @@ function Portfolio() {
 								</div>
 							</div>
 						</a>
-						<a href="https://jlpt-kanjis.herokuapp.com/" rel="noreferrer" target={"_blank"}>
+						<a href="https://kanji-flashcards-frontend.vercel.app/" rel="noreferrer" target={"_blank"}>
 							<div className={Styles.bork_img}>
 								<img src={flashcards} alt="" />
 								<div className={Styles.bork_title}>

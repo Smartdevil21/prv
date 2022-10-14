@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/prv/static/css/main.d8033a95.css",
-    "main.js": "/prv/static/js/main.e0072438.js",
+    "main.js": "/prv/static/js/main.1c96e554.js",
     "static/media/portfolio4.png": "/prv/static/media/portfolio4.a454bbe9e3dcf8139b21.png",
     "static/media/gsap1.png": "/prv/static/media/gsap1.29adb31342bb8a7a0fd2.png",
     "static/media/gsap2.png": "/prv/static/media/gsap2.8e3db6343ba0574d2662.png",
@@ -10,7 +10,7 @@
     "static/media/parallax.png": "/prv/static/media/parallax.d597dc669f8c6e492369.png",
     "static/media/bork_1.png": "/prv/static/media/bork_1.47151ad98eb3dc3e25e2.png",
     "static/media/fun1.png": "/prv/static/media/fun1.d8fb6c0d2b2f0f8e3222.png",
-    "static/media/profile.png": "/prv/static/media/profile.19b69132c6e1cb1826db.png",
+    "static/media/profile2.png": "/prv/static/media/profile2.2152aecd765c6032ccf9.png",
     "static/media/stayAfloat.png": "/prv/static/media/stayAfloat.c5f5a00baa8a8fd2a6c3.png",
     "static/media/chillMountains.png": "/prv/static/media/chillMountains.54d77468b0641ea2ff6e.png",
     "static/media/portfolio1.png": "/prv/static/media/portfolio1.ce428bed19d8428b6819.png",
@@ -22,10 +22,10 @@
     "static/media/mern_club.png": "/prv/static/media/mern_club.1bbe5d6b7d21d4039a7d.png",
     "index.html": "/prv/index.html",
     "main.d8033a95.css.map": "/prv/static/css/main.d8033a95.css.map",
-    "main.e0072438.js.map": "/prv/static/js/main.e0072438.js.map"
+    "main.1c96e554.js.map": "/prv/static/js/main.1c96e554.js.map"
   },
   "entrypoints": [
     "static/css/main.d8033a95.css",
-    "static/js/main.e0072438.js"
+    "static/js/main.1c96e554.js"
   ]
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Styles from "./Home.module.scss";
-import profile from "../../Images/profile.png";
+import profile from "../../Images/profile2.png";
 import { StatesContext } from "../../App";
 import { useContext } from "react";
 import { Icon } from "@iconify/react";

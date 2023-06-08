@@ -81,7 +81,7 @@ function Navbar() {
         <div
           className={Styles.link_wrapper}
           onClick={() => {
-            changeLink("/");
+            changeLink("/prv/");
           }}
         >
           <p

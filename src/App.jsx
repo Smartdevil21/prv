@@ -175,7 +175,7 @@ function App() {
         <SmallContact />
         <Routes>
           <Route
-            path="/"
+            path="/prv"
             element={
               <>
                 <Home />

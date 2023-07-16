@@ -57,7 +57,7 @@ function Home() {
         <p>
           Hello, I’m <strong>Pratik Vaidya</strong>,<br /> A MERN Stack
           Developer and aspiring DevOps Engineer
-          <br /> based in India.mddfda
+          <br /> based in India.
         </p>
       </div>
       <div className={Styles.changing_text}>

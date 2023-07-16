@@ -33,11 +33,11 @@ export const skills = [
   },
   {
     title: "Docker",
-    level: 70,
+    level: 60,
   },
   {
     title: "Jenkins",
-    level: 60,
+    level: 50,
   },
   {
     title: "Git & Github",
@@ -45,14 +45,14 @@ export const skills = [
   },
   {
     title: "Shell Scripting & Linux",
-    level: 75,
+    level: 60,
   },
   {
     title: "Communication",
-    level: 70,
+    level: 75,
   },
   {
     title: "Teamwork",
-    level: 70,
+    level: 60,
   },
 ];

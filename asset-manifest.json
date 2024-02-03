@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/prv/static/css/main.a88d13d7.css",
-    "main.js": "/prv/static/js/main.c08ed12e.js",
+    "main.css": "/prv/static/css/main.e5b44aac.css",
+    "main.js": "/prv/static/js/main.5eeca33c.js",
     "static/media/portfolio4.png": "/prv/static/media/portfolio4.a454bbe9e3dcf8139b21.png",
     "static/media/gsap1.png": "/prv/static/media/gsap1.29adb31342bb8a7a0fd2.png",
     "static/media/gsap2.png": "/prv/static/media/gsap2.8e3db6343ba0574d2662.png",
     "static/media/portfolio3.png": "/prv/static/media/portfolio3.9537d703a3caa4cb46f2.png",
+    "static/media/cvzard.png": "/prv/static/media/cvzard.dce53cc98e9b007a3b2b.png",
     "static/media/weddingPhotographer.png": "/prv/static/media/weddingPhotographer.fc45948c518aeab1b5e6.png",
     "static/media/parallax.png": "/prv/static/media/parallax.d597dc669f8c6e492369.png",
     "static/media/bork_1.png": "/prv/static/media/bork_1.47151ad98eb3dc3e25e2.png",
@@ -19,13 +20,12 @@
     "static/media/jlpt_flashcards.png": "/prv/static/media/jlpt_flashcards.e14d621038e011eb5db9.png",
     "static/media/fun3.png": "/prv/static/media/fun3.a8dd598a0ecd7355116f.png",
     "static/media/fun2.png": "/prv/static/media/fun2.a3765e6f93cbdf403c83.png",
-    "static/media/mern_club.png": "/prv/static/media/mern_club.1bbe5d6b7d21d4039a7d.png",
     "index.html": "/prv/index.html",
-    "main.a88d13d7.css.map": "/prv/static/css/main.a88d13d7.css.map",
-    "main.c08ed12e.js.map": "/prv/static/js/main.c08ed12e.js.map"
+    "main.e5b44aac.css.map": "/prv/static/css/main.e5b44aac.css.map",
+    "main.5eeca33c.js.map": "/prv/static/js/main.5eeca33c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a88d13d7.css",
-    "static/js/main.c08ed12e.js"
+    "static/css/main.e5b44aac.css",
+    "static/js/main.5eeca33c.js"
   ]
 }

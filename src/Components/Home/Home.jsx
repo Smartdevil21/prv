@@ -18,7 +18,7 @@ function Home() {
       "MERN Developer.",
       "JLPT N3 Cert.",
       "Travel Enthusiast.",
-      "Struggling Cook.",
+      // "Struggling Cook.",
     ];
     let content = words[word].slice(0, letter);
     fillup.current.innerHTML = content;

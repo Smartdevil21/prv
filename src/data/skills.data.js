@@ -53,6 +53,6 @@ export const skills = [
   },
   {
     title: "Teamwork",
-    level: 60,
+    level: 75,
   },
 ];

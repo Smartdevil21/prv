@@ -14,7 +14,12 @@ function Home() {
   let word = 0;
   let direction = "forwards";
   function typewriter() {
-    let words = ["MERN Developer.", "UI/UX Designer.", "Freelancer."];
+    let words = [
+      "MERN Developer.",
+      "JLPT N3 Cert.",
+      "Travel Enthusiast.",
+      "Struggling Cook.",
+    ];
     let content = words[word].slice(0, letter);
     fillup.current.innerHTML = content;
     if (direction === "forwards") {

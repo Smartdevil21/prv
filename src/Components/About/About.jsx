@@ -8,6 +8,7 @@ import portrait from "../../Images/portrait.jpg";
 import { useRoutes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { skills } from "../../data/skills.data";
+import { languagesData } from "../../data/languages.data";
 
 function About() {
   const navigate = useNavigate();
@@ -49,11 +50,10 @@ function About() {
               </p>
               <p>
                 I am a passionate Fullstack web developer with expertise in
-                ReactJS, NextJS, ExpressJS, NodeJS, MongoDB, TypeScript, and
-                JavaScript. I'm an aspiring DevOps enthusiast embarking on an
-                exciting journey. I'm passionate about leveraging my skills to
-                optimize deployments, enhance performance, and ensure rock-solid
-                infrastructure.
+                TypeScript, and JavaScript. I'm an aspiring DevOps enthusiast
+                embarking on an exciting journey. I'm passionate about
+                leveraging my skills to optimize deployments, enhance
+                performance, and ensure rock-solid infrastructure.
               </p>
               <br />
               <p>
@@ -65,7 +65,7 @@ function About() {
               <div className={Styles.info_sec}>
                 <div className={Styles.info_half_1}>
                   <p>
-                    <strong>Age</strong> 20
+                    <strong>Age</strong> 22
                   </p>
                   <p>
                     <strong>Freelance</strong> Available
@@ -82,7 +82,10 @@ function About() {
                     <strong>Address</strong> Nagpur, India
                   </p>
                   <p>
-                    <strong>Email</strong> pratikvaidya1803@gmail.com
+                    <strong>Email</strong>{" "}
+                    <a href="mailto:prtk.app.dev@gmail.com">
+                      prtk.app.dev@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -118,6 +121,23 @@ function About() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={Styles.languages}>
+        <h3>Languages</h3>
+        <div className={Styles.languages_wrapper}>
+          {Object.entries(languagesData).map((ele, index) => (
+            <div className={Styles.language} key={ele}>
+              <span className={Styles.language_title}>{ele[0]}</span>
+              <div className={Styles.level}>
+                <div
+                  className={Styles.level_indicator}
+                  data-level={`${ele[1]}%`}
+                  style={{ width: `${ele[1]}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className={Styles.skills}>

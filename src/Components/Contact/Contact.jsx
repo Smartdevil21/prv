@@ -1,151 +1,127 @@
-import { Button, TextField } from "@mui/material";
+import { Stack } from "@mui/material";
 import React, { useEffect, useContext, useState } from "react";
+import axios from "axios";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import Styles from "./Contact.module.scss";
 import { StatesContext } from "../../App";
-import axios from "axios";
 
 function Contact() {
-	const [loading, setLoading] = useState(false);
-	const { states, setStates } = useContext(StatesContext);
-	const [messageDetails, setMessageDetails] = useState({
-		name: "",
-		email: "",
-		contact: "",
-		message: "",
-	});
+  const { states, setStates } = useContext(StatesContext);
+  const initialValues = {
+    name: "",
+    email: "",
+    message: "",
+  };
 
-	useEffect(() => {
-		setStates((prev) => ({ ...prev, reversed: false }));
-	}, []);
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Your name is required"),
+    email: Yup.string()
+      .email("Not a valid email adderess")
+      .required("Your email is required"),
+    message: Yup.string().min(1).required("Please provide a message"),
+  });
 
-	const submit = async () => {
-		try {
-			if (
-				messageDetails.name &&
-				messageDetails.email &&
-				messageDetails.contact &&
-				messageDetails.message
-			) {
-				setLoading(true);
-				const result = await axios({
-					method: "post",
-					url: `${process.env.REACT_APP_BACKEND_URL}`,
-					data: {
-						username: messageDetails.name,
-						email: messageDetails.email,
-						message: messageDetails.message,
-					},
-				});
-				alert("Message Sent! ✈️");
-				setMessageDetails({
-					name: "",
-					email: "",
-					contact: "",
-					message: "",
-				});
-				setLoading(false);
-			} else {
-				alert("Fill the appropriate details first!");
-			}
-		} catch (error) {
-			console.log(error);
-		}
-	};
+  const onSubmit = async (values) => {
+    console.log(values);
+  };
 
-	return (
-		<section className={Styles.contact}>
-			<h1>Get In Touch!</h1>
-			<div className={Styles.input_wrapper}>
-				<div className={Styles.user_details}>
-					<TextField
-						variant="filled"
-						autoFocus
-						size="small"
-						placeholder="Name"
-						color="success"
-						value={messageDetails.name}
-						onChange={(e) => {
-							setMessageDetails((prev) => ({ ...prev, name: e.target.value }));
-						}}
-					/>
-					<TextField
-						variant="filled"
-						size="small"
-						placeholder="Email"
-						color="success"
-						type={"email"}
-						value={messageDetails.email}
-						onChange={(e) => {
-							setMessageDetails((prev) => ({ ...prev, email: e.target.value }));
-						}}
-					/>
-					<TextField
-						variant="filled"
-						size="small"
-						placeholder="Contact"
-						color="success"
-						type={"tel"}
-						value={messageDetails.contact}
-						onChange={(e) => {
-							setMessageDetails((prev) => ({
-								...prev,
-								contact: e.target.value,
-							}));
-						}}
-					/>
-				</div>
-				<br />
-				{/* <label htmlFor="name">Message:</label> */}
-				{/* <TextField
-					name="message"
-					variant="outlined"
-					size="small"
-					color="success"
-					placeholder="Message"
-					multiline
-					minRows={10}
-					fullWidth
-					className={Styles.message_input}
-				/> */}
-				<textarea
-					className={Styles.message_input}
-					value={messageDetails.message}
-					onChange={(e) => {
-						setMessageDetails((prev) => ({ ...prev, message: e.target.value }));
-					}}
-					rows={10}
-					placeholder="Message"
-				/>
-				<div className={Styles.bottom_div}>
-					<div
-						onMouseEnter={(e) => {
-							const test = document.querySelector(".test");
-							test.style.left = `${
-								e.clientX - Math.floor(e.target.getBoundingClientRect().left)
-							}px`;
-							test.style.top = `${
-								e.clientY - Math.floor(e.target.getBoundingClientRect().top)
-							}px`;
-						}}
-						onMouseLeave={(e) => {
-							const test = document.querySelector(".test");
-							test.style.left = `${
-								e.clientX - Math.floor(e.target.getBoundingClientRect().left)
-							}px`;
-							test.style.top = `${
-								e.clientY - Math.floor(e.target.getBoundingClientRect().top)
-							}px`;
-						}}
-						className={`${Styles.contact_btn}`}
-						onClick={submit}
-					>
-						<div className={`${Styles.test} test`}></div>
-						<p>{loading ? "Loading" : "Send"}</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+  const { values, errors, isSubmitting, handleSubmit, handleChange } =
+    useFormik({
+      initialValues,
+      onSubmit,
+      validationSchema,
+      validateOnBlur: true,
+    });
+
+  useEffect(() => {
+    setStates((prev) => ({ ...prev, reversed: false }));
+  }, []);
+
+  return (
+    <section className={Styles.contact}>
+      <h1>Get In Touch!</h1>
+      <div className={Styles.input_wrapper}>
+        <form onSubmit={handleSubmit}>
+          <Stack gap={0.5} sx={{ width: "100%" }}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              autoFocus
+              value={values.name}
+              onChange={handleChange}
+            />
+            {errors.name && (
+              <span
+                style={{ color: "red", fontSize: "12px", marginLeft: "5px" }}
+              >
+                {errors.name}
+              </span>
+            )}
+          </Stack>
+          <Stack gap={0.5} sx={{ width: "100%" }}>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={values.email}
+              onChange={handleChange}
+            />
+            {errors.email && (
+              <span
+                style={{ color: "red", fontSize: "12px", marginLeft: "5px" }}
+              >
+                {errors.email}
+              </span>
+            )}
+          </Stack>
+          <Stack gap={0.5} sx={{ width: "100%" }}>
+            <textarea
+              rows={5}
+              name="message"
+              placeholder="Write your message here"
+              value={values.message}
+              onChange={handleChange}
+            />
+            {errors.message && (
+              <span
+                style={{ color: "red", fontSize: "12px", marginLeft: "5px" }}
+              >
+                {errors.message}
+              </span>
+            )}
+          </Stack>
+          <button
+            onMouseEnter={(e) => {
+              const test = document.querySelector(".test");
+              test.style.left = `${
+                e.clientX - Math.floor(e.target.getBoundingClientRect().left)
+              }px`;
+              test.style.top = `${
+                e.clientY - Math.floor(e.target.getBoundingClientRect().top)
+              }px`;
+            }}
+            onMouseLeave={(e) => {
+              const test = document.querySelector(".test");
+              test.style.left = `${
+                e.clientX - Math.floor(e.target.getBoundingClientRect().left)
+              }px`;
+              test.style.top = `${
+                e.clientY - Math.floor(e.target.getBoundingClientRect().top)
+              }px`;
+            }}
+            className={`${Styles.contact_btn}`}
+            type="submit"
+            disabled={isSubmitting}
+          >
+            <div className={`${Styles.test} test`}></div>
+            <p>{isSubmitting ? "Loading" : "Send"}</p>
+          </button>
+        </form>
+      </div>
+    </section>
+  );
 }
 
 export default Contact;

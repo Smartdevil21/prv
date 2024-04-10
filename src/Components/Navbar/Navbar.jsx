@@ -81,24 +81,22 @@ function Navbar() {
         <div
           className={Styles.link_wrapper}
           onClick={() => {
-            changeLink("/prv/");
+            changeLink("/");
           }}
         >
-          <p
-            style={{ color: states.activeLink === "/prv" ? "#fff" : "#989898" }}
-          >
+          <p style={{ color: states.activeLink === "/" ? "#fff" : "#989898" }}>
             Home
           </p>
         </div>
         <div
           className={`${Styles.link_wrapper} mouse_hover`}
           onClick={() => {
-            changeLink("/prv/about");
+            changeLink("/about");
           }}
         >
           <p
             style={{
-              color: states.activeLink === "/prv/about" ? "#fff" : "#989898",
+              color: states.activeLink === "/about" ? "#fff" : "#989898",
             }}
           >
             About
@@ -107,12 +105,12 @@ function Navbar() {
         <div
           className={`${Styles.link_wrapper} mouse_hover`}
           onClick={() => {
-            changeLink("/prv/services");
+            changeLink("/services");
           }}
         >
           <p
             style={{
-              color: states.activeLink === "/prv/services" ? "#fff" : "#989898",
+              color: states.activeLink === "/services" ? "#fff" : "#989898",
             }}
           >
             Services
@@ -121,13 +119,12 @@ function Navbar() {
         <div
           className={`${Styles.link_wrapper} mouse_hover`}
           onClick={() => {
-            changeLink("/prv/portfolio");
+            changeLink("/portfolio");
           }}
         >
           <p
             style={{
-              color:
-                states.activeLink === "/prv/portfolio" ? "#fff" : "#989898",
+              color: states.activeLink === "/portfolio" ? "#fff" : "#989898",
             }}
           >
             Portfolio
@@ -136,12 +133,12 @@ function Navbar() {
         <div
           className={`${Styles.link_wrapper} mouse_hover`}
           onClick={() => {
-            changeLink("/prv/contact");
+            changeLink("/contact");
           }}
         >
           <p
             style={{
-              color: states.activeLink === "/prv/contact" ? "#fff" : "#989898",
+              color: states.activeLink === "/contact" ? "#fff" : "#989898",
             }}
           >
             Contact

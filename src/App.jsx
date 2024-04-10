@@ -175,7 +175,7 @@ function App() {
         <SmallContact />
         <Routes>
           <Route
-            path="/prv"
+            path="/"
             element={
               <>
                 <Home />
@@ -183,7 +183,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/prv/about"
+            path="/about"
             element={
               <>
                 <About />
@@ -191,7 +191,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/prv/services"
+            path="/services"
             element={
               <>
                 <Services />
@@ -199,7 +199,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/prv/portfolio"
+            path="/portfolio"
             element={
               <>
                 <Portfolio />
@@ -207,7 +207,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/prv/contact"
+            path="/contact"
             element={
               <>
                 <Contact />

@@ -18,6 +18,7 @@ import fun2 from "../../Images/fun2.png";
 import fun3 from "../../Images/fun3.png";
 import gsap1 from "../../Images/gsap1.png";
 import gsap2 from "../../Images/gsap2.png";
+import cnc from "../../Images/cnc.png";
 import { Icon } from "@iconify/react";
 // import weddingPhotographer from "../../Images/weddingPhotographer.png";
 
@@ -55,6 +56,20 @@ function Portfolio() {
                 <img src={cvzard} alt="" />
                 <div className={Styles.bork_title}>
                   <p>CVZard</p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://project-one-fe.vercel.app/"
+              rel="noreferrer"
+              target={"_blank"}
+            >
+              <div className={Styles.bork_img}>
+                <img src={cnc} alt="" />
+                <div className={Styles.bork_title}>
+                  <p>
+                    CNC: Real-time Orders Management for Restaurants and Cafes
+                  </p>
                 </div>
               </div>
             </a>
